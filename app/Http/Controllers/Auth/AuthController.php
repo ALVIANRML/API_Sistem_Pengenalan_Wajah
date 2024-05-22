@@ -66,9 +66,29 @@ class AuthController extends Controller
         return response()->json([
             'code'      => 200,
             'message'   => [
-                'user' => $user,
-                'token'=> $token,
+                'user'   => $user,
+                'token' => $token,
             ],
         ]);
     }
+
+    public function logout(Request $request)
+    {
+        if ($request->user()) {
+            // Menghapus token akses pengguna yang terautentikasi
+            $request->user()->token()->delete();
+
+            return response()->json([
+                'message'   => 'Berhasil logout',
+                'status'    => true,
+                'code' => 200,
+            ]);
+        } else {
+            // Jika tidak ada pengguna yang terautentikasi, kembalikan respon yang sesuai
+            return response()->json([
+                'message' => 'Tidak ada pengguna yang terautentikasi',
+                'code' => 404,
+            ]);
+        }
+}
 }
