@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('nama')->nullable();
+            $table->string('name')->nullable();
+            $table->integer('semester')->nullable();
             $table->timestamps();
         });
     }

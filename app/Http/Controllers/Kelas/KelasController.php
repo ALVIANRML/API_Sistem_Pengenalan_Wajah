@@ -38,10 +38,11 @@ class KelasController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'semester' => 'required',
         ]);
-
         $add = Kelas::create([
             'name' => $request->name,
+            'semester' => $request->semester,
         ]);
         return response()->json([
             'message'   => 'berhasil menambahkan kelas',
@@ -85,10 +86,13 @@ class KelasController extends Controller
     public function update(Request $request, string $id)
     {
         $kelasexist = Kelas::where('id',$id)->first();
+        // var_dump(20);
+        // exit;
 
         if ($kelasexist){
             $kelasexist->update([
                 'name' => $request -> name ?? $kelasexist -> name,
+                'semester' => $request -> semester ?? $kelasexist -> semester,
             ]);
 
             return response()->json([

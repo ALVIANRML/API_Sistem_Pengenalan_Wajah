@@ -14,7 +14,7 @@ class WaktuController extends Controller
      */
     public function index()
     {
-        $waktu = DB::table('waktu')->all();
+        $waktu = DB::table('waktu')->get();
         return response()->json([
             'message'       => 'seluruh data waktu',
             'code'          => 200,

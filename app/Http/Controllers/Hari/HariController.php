@@ -14,7 +14,7 @@ class HariController extends Controller
      */
     public function index()
     {
-        $hari = DB::table('hari')->all();
+        $hari = DB::table('hari')->get();
         return response()->json([
             'status'        => true,
             'code'          => 200,
