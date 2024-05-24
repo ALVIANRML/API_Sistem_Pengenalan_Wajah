@@ -99,28 +99,37 @@ class SiswaController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        $siswaexist = Siswa::where('id',$id)->first();
+{
+  $siswaexist = Siswa::where('id',$id)->first();
 
-        if ($siswaexist){
-            $siswaexist->update([
-                'name' =>$request->name,
-                'nim' =>$request->nim,
-                'gambar' =>$request->gambar,
-            ]);
-            return response()->json([
-                'status'    => true,
-                'code'      => 200,
-                'message'   => 'siswa berhasil di update',
-                'data'      => $siswaexist,
-            ]);
-        }
-        return response()->json([
-            'status'=> false,
-            'code'  => 404,
-            'message'   => 'data tidak ditemukan',
-        ]);
+  if ($siswaexist){
+    $photoName = null;
+
+    if ($request->hasFile('gambar')) {
+      $photoName = time() . '.' . $request->gambar->extension();
+      $request->gambar->move(public_path('images'), $photoName);
     }
+
+    $siswaexist->update([
+      'nama' => $request->nama ?? $siswaexist->nama,
+      'nim' => $request->nim ?? $siswaexist->nim,
+      'gambar' => $photoName,
+    ]);
+
+    return response()->json([
+      'status' => true,
+      'code' => 200,
+      'message' => 'siswa berhasil di update',
+      'data' => $siswaexist,
+    ]);
+  }
+
+  return response()->json([
+    'status' => false,
+    'code' => 404,
+    'message' => 'data tidak ditemukan',
+  ]);
+}
 
     /**
      * Remove the specified resource from storage.
