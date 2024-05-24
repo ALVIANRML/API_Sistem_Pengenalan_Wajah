@@ -3,9 +3,10 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\Dosen\DosenController;
 use App\Http\Controllers\Hari\HariController;
+use App\Http\Controllers\Dosen\DosenController;
 use App\Http\Controllers\Kelas\KelasController;
+use App\Http\Controllers\Siswa\SiswaController;
 use App\Http\Controllers\Waktu\WaktuController;
 
 // Route to get the authenticated user
@@ -20,6 +21,7 @@ Route::apiResource('dosen', DosenController::class);
 Route::apiResource('kelas', KelasController::class);
 Route::apiResource('hari', HariController::class);
 Route::apiResource('waktu', WaktuController::class);
+Route::apiResource('siswa', SiswaController::class);
 
 // Group routes that require authentication
 Route::middleware(['auth:api'])->group(function () {

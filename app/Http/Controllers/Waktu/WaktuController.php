@@ -106,12 +106,12 @@ class WaktuController extends Controller
                 'data'          => $waktuexist,
             ]);
         }
-        return response()->json([
-            'message'       => 'waktu tidak ditemukan',
-            'code'          => 404,
-            'status'        => false,
-            // 'data'          => $waktuexist,
-        ]);
+                return response()->json([
+                    'message'       => 'waktu tidak ditemukan',
+                    'code'          => 404,
+                    'status'        => false,
+                    // 'data'          => $waktuexist,
+                ]);
     }
 
     /**
