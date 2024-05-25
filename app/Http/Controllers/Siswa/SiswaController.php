@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Siswa\SiswaResource;
 use App\Models\Siswa;
 
 class SiswaController extends Controller
@@ -15,6 +16,7 @@ class SiswaController extends Controller
     public function index()
     {
         $siswa = DB::table('siswa')->get();
+        $siswa = SiswaResource::collection($siswa);
         return response()->json([
             'status' => true,
             'message'=> 'Seluruh data dapat di tampilkan',

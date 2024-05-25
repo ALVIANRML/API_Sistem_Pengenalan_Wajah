@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dosen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Dosen\DosenResource;
 use App\Models\dosen;
 
 class DosenController extends Controller
@@ -15,6 +16,7 @@ class DosenController extends Controller
     public function index()
     {
         $dosen = DB::table('dosen')->get();
+        $dosen = DosenResource::collection($dosen);
         return response()->json([
             'data' => $dosen,
             'code'  => 200,
@@ -123,7 +125,7 @@ class DosenController extends Controller
                 'status'    => true,
             ]);
         }
-        
+
         return response()->json([
             'status'    => false,
             'message'   => 'dosen tidak ditemukan',

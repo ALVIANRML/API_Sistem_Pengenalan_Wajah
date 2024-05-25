@@ -16,4 +16,8 @@ class Siswa extends Model
         'nim',
         'gambar',
     ];
+
+    public function daftarWajah(){
+        return $this->belongsTo(daftarWajah::class, 'daftarWajah_id');
+    }
 }

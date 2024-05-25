@@ -15,4 +15,8 @@ class dosen extends Model
         'name',
         'nip',
     ];
+
+    public function daftarWajah(){
+        return $this->belongsTo(daftarWajah::class, 'daftarWajah_id');
+    }
 }

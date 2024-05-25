@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Kelas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Dosen\DosenResource;
+use App\Http\Resources\Kelas\KelasResource;
 use App\Models\Kelas;
 
 class KelasController extends Controller
@@ -14,11 +16,12 @@ class KelasController extends Controller
      */
     public function index()
     {
-        $dosen = DB::table('kelas')->first();
+        $kelas = DB::table('kelas')->get();
+        $kelas = KelasResource::collection($kelas);
         return response()->json([
             'status'    => true,
             'message'   => 'all data',
-            'data'      => $dosen,
+            'data'      => $kelas,
             'code'      => 200,
         ]);
     }
