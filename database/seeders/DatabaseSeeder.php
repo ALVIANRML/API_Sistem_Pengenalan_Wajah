@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\dosen;
 use App\Models\User;
 use App\Models\Waktu;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -22,8 +23,12 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            // Waktu::class,
-            // Kelas::class,
+            // WaktuSeeder::class,
+            // KelasSeeder::class,
+            // DosenSeeder::class,
+            // AuthSeeder::class,
+                SiswaSeeder::class,
+
         ]);
     }
 }
