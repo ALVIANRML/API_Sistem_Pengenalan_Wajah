@@ -19,7 +19,7 @@ class WaktuResource extends JsonResource
             'id'            => $this-> id,
             'waktu_awal'    => $this-> waktu_awal,
             'range'         => $this-> range,
-            'waktui_akhir'  => $this-> waktu_akhir,
+            'waktu_akhir'  => $this-> waktu_akhir,
         ];
     }
 }

@@ -30,6 +30,8 @@ class AbsenResource extends JsonResource
         'siswa' => new SiswaResource($siswa),
         'present'=> $this->present,
         'waktu' => new WaktuResource($waktu),
+        'created_at' => $this->created_at,
+         "updated_at" => $this-> updated_at,
         ];
     }
 }
