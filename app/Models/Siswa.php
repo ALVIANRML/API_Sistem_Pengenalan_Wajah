@@ -20,4 +20,8 @@ class Siswa extends Model
     public function daftarWajah(){
         return $this->belongsTo(daftarWajah::class, 'daftarWajah_id');
     }
+
+    public function absen(){
+        return $this->belongsTo(absen::class, 'absen_id');
+    }
 }

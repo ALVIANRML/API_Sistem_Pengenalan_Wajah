@@ -23,11 +23,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            // WaktuSeeder::class,
-            // KelasSeeder::class,
-            // DosenSeeder::class,
-            // AuthSeeder::class,
+            AuthSeeder::class,
+            DosenSeeder::class,
+            WaktuSeeder::class,
+            KelasSeeder::class,
                 SiswaSeeder::class,
+                AbsenSeeder::class,
+                DataWajahSeeder::class,
 
         ]);
     }

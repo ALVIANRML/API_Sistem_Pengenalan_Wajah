@@ -1,7 +1,7 @@
 INSERT INTO
 "siswa"
 (
-    "id", "nama", "nim", "gambar", "created_at", "updated_at"
+    "id", "nama", "nim", "gambar","created_at","updated_at"
 )
 
 VALUES
@@ -10,35 +10,35 @@ VALUES
 -- untuk gambar ikutin aja duplikat aja
 ),
 (
-    '9251a73d-c361-4965-b78d-f3bc9816f428', 'ALVIAN', '221401085', 'public/images/1716567771.jpg', '2024-05-25 07:37:00', '2024-05-25 07:37:00'
+    '15729de5-4099-425a-88c0-310a234cb9ff', 'ALVIAN', '221401085', 'public/images/1716567771.jpg', '2024-05-25 07:37:00', '2024-05-25 07:37:00'
 ),
 (
-    '07127a32-1c5f-4628-a9ea-f0249c9078da', 'DEAN MUHAMMAD DARMAYANA', '221401066', 'public/images/1716567771.jpg', '2024-05-25 07:40:00', '2024-05-25 07:40:00'
+    '1d3ed53d-79d1-4e3f-8561-f29a6e3c0063', 'DEAN MUHAMMAD DARMAYANA', '221401066', 'public/images/1716567771.jpg', '2024-05-25 07:40:00', '2024-05-25 07:40:00'
 ),
 (
-    '1b862ed1-eb7f-4a5a-a846-64bd09754273', 'MUHAMMAD SIDIQ', '221401053', 'public/images/1716567771.jpg', '2024-05-25 07:41:00', '2024-05-25 07:41:00'
+    'c6283844-a056-4764-aa81-03c1cb0596db', 'MUHAMMAD SIDIQ', '221401053', 'public/images/1716567771.jpg', '2024-05-25 07:41:00', '2024-05-25 07:41:00'
 ),
 (
-    'ce61b369-1bd8-4ede-9556-70b6c77caeba', 'MUHAMMAD AL GHIFARI LUBIS', '221401108', 'public/images/1716567771.jpg', '2024-05-25 07:42:00', '2024-05-25 07:42:00'
+    '3475dfec-348e-45d2-a8f1-22fead9f3b89', 'MUHAMMAD AL GHIFARI LUBIS', '221401108', 'public/images/1716567771.jpg', '2024-05-25 07:42:00', '2024-05-25 07:42:00'
 ),
 (
-    '5cf2a924-a8c1-48a1-95aa-6d091ec76d3c', 'EDI SURANTA GINTNG', '221401134', 'public/images/1716567771.jpg', '2024-05-25 07:43:00', '2024-05-25 07:43:00'
+    '371a7a30-d944-404e-a338-b84ffbb9e9d5', 'EDI SURANTA GINTNG', '221401134', 'public/images/1716567771.jpg', '2024-05-25 07:43:00', '2024-05-25 07:43:00'
 ),
 (
-    'e42deaa3-948e-4fa3-9311-b0b2f9bef4aa', 'RAKHA ADITYA', '221401014', 'public/images/1716567771.jpg', '2024-05-25 07:44:00', '2024-05-25 07:44:00'
+    'ce055508-ffe5-47bc-8b4e-454b8063848e', 'RAKHA ADITYA', '221401014', 'public/images/1716567771.jpg', '2024-05-25 07:44:00', '2024-05-25 07:44:00'
 ),
 (
-    'ca9b2e9d-b4d7-4686-9929-2c006bd5a38d', 'ANDIKA PRAYOGO', '221401050', 'public/images/1716567771.jpg', '2024-05-25 07:45:00', '2024-05-25 07:45:00'
+    '0bfe505c-f2b1-4918-884e-f8d14d47912e', 'ANDIKA PRAYOGO', '221401050', 'public/images/1716567771.jpg', '2024-05-25 07:45:00', '2024-05-25 07:45:00'
 ),
 (
-    'f30e4c95-e90f-4b77-977b-fb993e7f8b32', 'FERRY FERNANDOLI SIRAIT', '221401097', 'public/images/1716567771.jpg', '2024-05-25 07:46:00', '2024-05-25 07:46:00'
+    '68cc7275-02de-486a-aa35-348208a0a5e5', 'FERRY FERNANDOLI SIRAIT', '221401097', 'public/images/1716567771.jpg', '2024-05-25 07:46:00', '2024-05-25 07:46:00'
 ),
 (
-    'a95fe028-9b66-4ccb-8f4b-6928db585b07', 'RICHARD FAJAR CHRISTIAN', '221401122', 'public/images/1716567771.jpg', '2024-05-25 07:47:00', '2024-05-25 07:47:00'
+    'cc027cb3-a43a-44e2-8029-df6e5bd4cfe3', 'RICHARD FAJAR CHRISTIAN', '221401122', 'public/images/1716567771.jpg', '2024-05-25 07:47:00', '2024-05-25 07:47:00'
 ),
 (
-    '719fffe3-9aeb-4342-baee-b45124fa600c', 'Hotbaen E. Situmorang', '221401070', 'public/images/1716567771.jpg', '2024-05-25 07:48:00', '2024-05-25 07:48:00'
+    '17c2ad7c-c5a9-4f08-ac48-6d9901e6856f', 'Hotbaen E. Situmorang', '221401070', 'public/images/1716567771.jpg', '2024-05-25 07:48:00', '2024-05-25 07:48:00'
 ),
 (
-    'd9b69cee-b0e3-4bca-875e-23eb11430f66', 'SAMUEL BRYAN PARASIAN SITANGGANG', '221401125', 'public/images/1716567771.jpg', '2024-05-25 07:49:00', '2024-05-25 07:49:00'
+    'c924cae9-a92a-45d1-9c2c-531cf33a4c8c', 'SAMUEL BRYAN PARASIAN SITANGGANG', '221401125', 'public/images/1716567771.jpg', '2024-05-25 07:49:00', '2024-05-25 07:49:00'
 );

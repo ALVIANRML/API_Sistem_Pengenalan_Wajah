@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Absen\AbsenController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
@@ -25,6 +26,7 @@ Route::apiResource('hari', HariController::class);
 Route::apiResource('waktu', WaktuController::class);
 Route::apiResource('siswa', SiswaController::class);
 Route::apiResource('daftarwajah', DaftarWajahController ::class);
+Route::apiResource('absen', AbsenController ::class);
 
 // Group routes that require authentication
 Route::middleware(['auth:api'])->group(function () {

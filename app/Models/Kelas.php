@@ -15,4 +15,11 @@ class Kelas extends Model
         'name',
         'semester'
     ];
+
+    public function absen(){
+        return $this->belongsTo(absen::class, 'absen_id');
+    }
+    public function daftarWajah(){
+        return $this->belongsTo(daftarWajah::class, 'daftar_wajah_id');
+    }
 }

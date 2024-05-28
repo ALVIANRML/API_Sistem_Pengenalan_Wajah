@@ -50,7 +50,7 @@ class DaftarWajahController extends Controller
         ]);
 
         return response()->json([
-            'message'   => 'dosen berhasil ditambahkan',
+            'message'   => 'wajah berhasil ditambahkan',
             'code'      => 200,
             'data'      => $add,
         ]);
@@ -64,10 +64,12 @@ class DaftarWajahController extends Controller
         $daftarWajahExisted = daftarWajah::where('id',$id)->first();
 
         if ($daftarWajahExisted) {
+
+           $showDaftarWajah =  new DaftarWajahResource($daftarWajahExisted);
             return response()->json([
                 'message'   => 'daftar wajah tersedia',
                 'code'      => 200,
-                'data'      => $daftarWajahExisted,
+                'data'      => $showDaftarWajah,
             ]);
         }
         return response()->json([
